@@ -1,0 +1,3 @@
+[submodule "ModelBase"]
+	path = ModelBase
+	url = https://github.com/MiniGee/ModelBase.git
