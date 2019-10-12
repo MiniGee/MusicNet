@@ -358,7 +358,8 @@ MigrationBackup/
 !.vscode/extensions.json
 
 
+__*/
 data_*/
+*.log
 weights/
-gen_*/
-
+output/
