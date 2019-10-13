@@ -363,3 +363,4 @@ data_*/
 *.log
 weights/
 output/
+Midi/

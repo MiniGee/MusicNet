@@ -81,7 +81,7 @@ std::vector<Uint8> ProcessMidi(const std::string& path)
 	file.makeAbsoluteTicks();
 
 	// Calc time factor
-	double factor = _32 / file.getTicksPerQuarterNote();
+	double factor = _16 / file.getTicksPerQuarterNote();
 	Uint32 totalTime = (Uint32)std::round(file.getFileDurationInTicks() * factor) + 1;
 	Uint32 numTracks = file.getNumTracks();
 
@@ -134,8 +134,8 @@ std::vector<Uint8> ProcessMidi(const std::string& path)
 			if (lastTime != time)
 			{
 				Uint32 duration = time - lastTime;
-				if (duration > 32)
-					duration = 32;
+				if (duration > 16)
+					duration = 16;
 
 				stream.push_back(duration + 89);
 			}
